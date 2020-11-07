@@ -21,7 +21,7 @@ export class InicioSesionComponent implements OnInit {
         localStorage.setItem('token', datos[0]);
         localStorage.setItem('Usuario', datos[1]);
         localStorage.setItem('Tipo', datos[2]);
-        alert("Bienvenido"+datos[1]);
+        alert("Bienvenido usuario: "+datos[1]);
         this.iniciosesion.sesioniniciada();
         this.iniciosesion.tipousuario();
         //this.router.navigate(['ruta']);

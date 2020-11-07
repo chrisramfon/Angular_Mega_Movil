@@ -1,6 +1,26 @@
-<p>inicio-sesion works!</p>
+<!--<p>inicio-sesion works!</p>
 <input type="text" [(ngModel)]="usuario.Usuario" placeholder="Usuario" id="Usuario" name="Usuario">
 <br>
 <input type="password" [(ngModel)]="usuario.Contrasena" placeholder="Contraseña" name="Contrasena" id="Contrasena">
 <br>
-<input type="button" name="" (click)="login()" value="entrar">
+<input type="button" (click)="login()" value="entrar">-->
+
+<div id="principal">
+    <div id="titulo" class="section-tittle" align="center" style="margin-top: 70px;">
+        <h2>Inicio de Sesión</h2>
+    </div>
+    <div id="media">
+        <div id="formu" align="center" style="margin-bottom: 70px">
+            <br>
+            <br>
+            <form id="registroCliente" class="entry-form">
+                
+                <input type="text" [(ngModel)]="usuario.Usuario" placeholder="Usuario" id="Usuario" name="Usuario" class="form-control">
+                
+                <input type="password" [(ngModel)]="usuario.Contrasena" placeholder="Contraseña" name="Contrasena" id="Contrasena" class="form-control">
+                
+ 
+                <input type="button" (click)="login()" value="entrar" class="section-btn">
+            </form>
+        </div>
+    </div>
