@@ -1,1 +1,6 @@
 <p>inicio-sesion works!</p>
+<input type="text" [(ngModel)]="usuario.Usuario" placeholder="Usuario" id="Usuario" name="Usuario">
+<br>
+<input type="password" [(ngModel)]="usuario.Contrasena" placeholder="Contraseña" name="Contrasena" id="Contrasena">
+<br>
+<input type="button" name="" (click)="login()" value="entrar">
