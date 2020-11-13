@@ -9,11 +9,13 @@ import {FormsModule} from '@angular/forms';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 //Servicios
 import { InicioSesionService } from './servicios/inicio-sesion.service';
+import { ClienteCitaComponent } from './cliente-cita/cliente-cita.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InicioSesionComponent
+    InicioSesionComponent,
+    ClienteCitaComponent
   ],
   imports: [
     BrowserModule,
