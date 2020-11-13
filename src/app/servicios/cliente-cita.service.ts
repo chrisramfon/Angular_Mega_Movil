@@ -16,7 +16,7 @@ export class ClienteCitaService {
   constructor(private http: HttpClient){}
 
 
-//Manda los datos a la ruta de inicio de sesion de express
+//Manda los datos a la ruta de clientes de express
   cita(cliente){
     return this.http.post<any>(this.url,cliente);
   }
