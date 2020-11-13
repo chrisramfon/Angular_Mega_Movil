@@ -8,6 +8,8 @@ import {FormsModule} from '@angular/forms';
 
 //Componentes
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
+import { ClienteCitaComponent } from './cliente-cita/cliente-cita.component';
+
 //Servicios
 import { InicioSesionService } from './servicios/inicio-sesion.service';
 import { ClienteCitaService } from './servicios/cliente-cita.service';
