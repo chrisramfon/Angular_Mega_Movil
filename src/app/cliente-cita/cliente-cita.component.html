@@ -1,20 +1,16 @@
-<div id="principal">
-    <div id="cliente-cita" class="section-tittle" align="center" style="margin-top: 70px;">
-        <h2>Hacer una cita</h2>
-    </div>
-    <div id="media">
-        <div id="formula" align="center" style="margin-bottom: 70px">
-            <br>
-            <br>
-            <form id="registroCita" class="entry-form">
+<br>
+<input [(ngModel)]="cliente.id_cita" type="hidden" placeholder="ID CITA" value="{{cliente.id_cita}}">
+<br>
+<input [(ngModel)]="cliente.Fecha_Hora" type="datetime" placeholder="Fecha y Hora" value="{{cliente.Fecha_Hora}">
+<br>
+<input [(ngModel)]="cliente.Motivo" type="text" placeholder="Motivo de la cita" value="{{cliente.Motivo}}">
+<br>
+<input [(ngModel)]="cliente.id_Empleado" type="hidden" placeholder="ID EMPLEADO" value="{{cliente.id_Empleado}}">
+<br>
+<input [(ngModel)]="cliente.Matricula_Vehiculo" type="text" placeholder="año" value="{{cliente.Matricula_Vehiculo}}">
+<br>
+<br>
+<button (click)="registrar()">Registrar cita</button>
 
-                <input type="hidden" [(ngModel)]="cliente.id" id="IDcliente" name="IDcliente" class="form-control">
-
-                <input type="datetime" [(ngModel)]="cliente.Fecha_Hora" placeholder="Fecha y Hora" id="Clientecita" name="Clientecita" class="form-control">
-
-                <input type="text" [(ngModel)]="cliente.Motivo" placeholder="Motivo de la cita" name="Motivo" id="Motivo" class="form-control">
-
-                <input type="button" (click)="crearCita()" value="entrar" class="section-btn">
-            </form>
-        </div>
-    </div>
+<br>
+<br>

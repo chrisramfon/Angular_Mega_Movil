@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {  Router  } from '@angular/router';
 import {  ClienteCitaService  } from '../servicios/cliente-cita.service';
 
 @Component({
@@ -7,25 +6,42 @@ import {  ClienteCitaService  } from '../servicios/cliente-cita.service';
   templateUrl: './cliente-cita.component.html',
   styleUrls: ['./cliente-cita.component.css']
 })
-export class ClienteCitaComponent implements OnInit {
-cliente = {id:"", Fecha_Hora:"", Motivo:"", Matricula_Vehiculo:""   }
-  constructor(private clientecita: ClienteCitaService, private router:Router) { }
+export class ClienteCitaComponent implements OnInit{ 
 
-  ngOnInit(): void {
+
+  cita = {
+    id_cita:"",
+    Fecha_Hora:"",
+    Motivo:"",
+    Estado:"",
+    id_Empleado:"",
+    Matricula_Vehiculo:""
   }
-crearCita(){
-this.clientecita.cita(this.cliente).subscribe(
-res=>{
-  console.log(res);
-  const datosclientecita = res.envio.split(",");
-  localStorage.setItem('token',datosclientecita[0]);
-  localStorage.setItem('Fecha_Hora',datosclientecita[1]);
-  localStorage.setItem('Motivo',datosclientecita[2]);
-  }
+  cita2
 
+  constructor(private ClienteCitaService:ClienteCitaService){ }
 
-
-)
-
+ngOnInit(): void {
 }
+registrarcita(){
+  this.ClienteCitaService.registrarcita(this.cita).subscribe(res=>{
+    console.log(res)
+    alert("Cita Registrada")
+    this.consultarcitas();
+    this.limpiarcita();
+     },
+  err => console.log(err))
+}
+  consultarcitas(){
+    this.cita2 = this.ClienteCitaService.getcitas();
+  }
+  limpiarcita(){
+    this.cita.id_cita=""
+    this.cita.Fecha_Hora=""
+    this.cita.Motivo=""
+    this.cita.Estado=""
+    this.cita.id_Empleado=""
+    this.cita.Matricula_Vehiculo=""
+
+  }
 }

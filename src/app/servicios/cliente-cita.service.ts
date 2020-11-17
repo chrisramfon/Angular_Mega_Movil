@@ -8,18 +8,22 @@ import { HttpClient } from '@angular/common/http';
 
 
 export class ClienteCitaService {
-  url = "http://localhost:3000/clientes/nuevacita";
-  @Output() change: EventEmitter<boolean> = new EventEmitter();
-  @Output() change2: EventEmitter<String> = new EventEmitter();
+ private url = "http://localhost:3000/clientes/nuevacita";
   
+
+ private UrlMisCitas= "http://localhost:3000/clientes/"
 
   constructor(private http: HttpClient){}
 
 
 //Manda los datos a la ruta de clientes de express
-  cita(cliente){
+  registrarcita(cliente){
     return this.http.post<any>(this.url,cliente);
   }
-
+  
+/*Obtener los datos de la ruta de express, con el get*/
+getcitas(){
+  return this.http.get<any>(this.UrlMisCitas)
+}
 
 }
