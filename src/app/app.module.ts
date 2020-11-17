@@ -5,21 +5,28 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
+
 //Componentes
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
+import { MenuComponent } from './menu/menu.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 //Servicios
 import { InicioSesionService } from './servicios/inicio-sesion.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    InicioSesionComponent
+    InicioSesionComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [
     InicioSesionService
