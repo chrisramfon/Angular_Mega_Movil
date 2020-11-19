@@ -13,13 +13,15 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 //Servicios
 import { InicioSesionService } from './servicios/inicio-sesion.service';
+import { VehiculoComponent } from './vehiculo/vehiculo.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioSesionComponent,
-    MenuComponent
+    MenuComponent,
+    VehiculoComponent
   ],
   imports: [
     BrowserModule,
