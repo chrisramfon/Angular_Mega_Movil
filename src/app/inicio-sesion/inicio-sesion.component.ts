@@ -24,7 +24,7 @@ export class InicioSesionComponent implements OnInit {
         alert("Bienvenido usuario: "+datos[1]);
         this.iniciosesion.sesioniniciada();
         this.iniciosesion.tipousuario();
-        //this.router.navigate(['ruta']);
+        this.router.navigate(['cita']);
       }, err => {
         console.log(err)
         alert("Usuario o contraseña incorrecto");
