@@ -12,6 +12,8 @@ export class ClienteCitaComponent implements OnInit{
   cita = {
     id_cita:"",
     Fecha_Hora:"",
+    Fecha:"",
+    Hora:"",
     Motivo:"",
     Estado:"",
     id_Empleado:"",
@@ -24,6 +26,7 @@ export class ClienteCitaComponent implements OnInit{
 ngOnInit(): void {
 }
 registrarcita(){
+  this.cita.Fecha_Hora=this.cita.Fecha+".T"+this.cita.Hora
   this.ClienteCitaService.registrarcita(this.cita).subscribe(res=>{
     console.log(res)
     alert("Cita Registrada")

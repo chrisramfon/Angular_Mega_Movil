@@ -1,13 +1,19 @@
 <br>
-<input [(ngModel)]="cita.id_cita" type="hidden" placeholder="ID CITA" value="{{cita.id_cita}}">
+<input [(ngModel)]="cita.id_cita" type="hidden" value="{{cita.id_cita}}">
 <br>
-<input [(ngModel)]="cita.Fecha_Hora" type="datetime" placeholder="Fecha y Hora" value="{{cita.Fecha_Hora}">
+<input [(ngModel)]="cita.Fecha" type="date" placeholder="Fecha" value="{{cita.Fecha}}">
+<br>
+<br>
+<input [(ngModel)]="cita.Hora" type="time" placeholder=" Hora" value="{{cita.Hora}}">
 <br>
 <input [(ngModel)]="cita.Motivo" type="text" placeholder="Motivo de la cita" value="{{cita.Motivo}}">
 <br>
-<input [(ngModel)]="cita.id_Empleado" type="hidden" placeholder="ID EMPLEADO" value="{{cita.id_Empleado}}">
+<input [(ngModel)]="cita.id_Empleado" type="hidden" value="{{cita.id_Empleado}}">
 <br>
 <input [(ngModel)]="cita.Matricula_Vehiculo" type="text" placeholder="Matricula del Vehiculo" value="{{cita.Matricula_Vehiculo}}">
+<br>
+<br>
+<input [(ngModel)]="cita.Estado" type="hidden" value="{{cita.Estado}}">
 <br>
 <br>
 <button (click)="registrarcita()">Registrar cita</button>
