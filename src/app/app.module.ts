@@ -10,10 +10,11 @@ import {FormsModule} from '@angular/forms';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { MenuComponent } from './menu/menu.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { VehiculoComponent } from './vehiculo/vehiculo.component';
 
 //Servicios
 import { InicioSesionService } from './servicios/inicio-sesion.service';
-import { VehiculoComponent } from './vehiculo/vehiculo.component';
+import { VehiculosService } from './servicios/vehiculos.service';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { VehiculoComponent } from './vehiculo/vehiculo.component';
     NgbModule
   ],
   providers: [
-    InicioSesionService
+    InicioSesionService,
+    VehiculosService
   ],
   bootstrap: [AppComponent]
 })
