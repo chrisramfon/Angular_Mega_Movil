@@ -11,19 +11,23 @@ import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { MenuComponent } from './menu/menu.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { VehiculoComponent } from './vehiculo/vehiculo.component';
+import { ClienteCitaComponent } from './cliente-cita/cliente-cita.component';
 
 //Servicios
 import { InicioSesionService } from './servicios/inicio-sesion.service';
 import { VehiculosService } from './servicios/vehiculos.service';
-
+import { ClienteCitaService } from './servicios/cliente-cita.service';
 
 @NgModule({
+
   declarations: [
     AppComponent,
     InicioSesionComponent,
     MenuComponent,
-    VehiculoComponent
+    VehiculoComponent,
+    ClienteCitaComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -31,10 +35,14 @@ import { VehiculosService } from './servicios/vehiculos.service';
     FormsModule,
     NgbModule
   ],
+
   providers: [
     InicioSesionService,
-    VehiculosService
+    VehiculosService,
+    ClienteCitaService
   ],
+
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
