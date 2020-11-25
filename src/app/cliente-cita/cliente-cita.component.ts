@@ -16,7 +16,7 @@ export class ClienteCitaComponent implements OnInit{
     Hora:"",
     Motivo:"",
     Estado:"Activo",
-    id_Empleado:"",
+    id_Empleado:"e0",
     Matricula_Vehiculo:"",
     id:""
   }
