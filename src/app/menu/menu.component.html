@@ -1,25 +1,25 @@
 <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" (click) = "colapsar()">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" (click)="colapsar()">
       <span class="icon icon-bar"></span>
       <span class="icon icon-bar"></span>
       <span class="icon icon-bar"></span>
       </button>
-      <a href="" class="navbar-brand">MEGA</a>
+            <a href="" class="navbar-brand">MEGA</a>
+        </div>
+        <div class="collapse navbar-collapse" [ngbCollapse]="colapsado">
+            <ul class="nav navbar-nav navbar-nav-first">
+                <li><a href="" class="smoothScroll">Clientes</a></li>
+                <li><a href="" class="smoothScroll">Empleados</a></li>
+
+                <li><a href="#top" class="smoothScroll">Inicio</a></li>
+                <li><a href="" class="smoothScroll">Nosotros</a></li>
+                <li><a href="#team" class="smoothScroll">Productos</a></li>
+                <li><a href="#testimonial" class="smoothScroll">Reviews</a></li>
+                <li><a href="" class="smoothScroll">Cerrar Sesión</a></li>
+
+            </ul>
+        </div>
     </div>
-    <div class="collapse navbar-collapse" [ngbCollapse]="colapsado">
-      <ul class="nav navbar-nav navbar-nav-first">
-        <li><a href="" class="smoothScroll">Clientes</a></li>
-        <li><a href="" class="smoothScroll">Empleados</a></li>
-        <li><a href="" class="smoothScroll">Cerrar Sesión</a></li> 
-        
-          <li><a href="#top" class="smoothScroll">Inicio</a></li>
-          <li><a href="" class="smoothScroll">Nosotros</a></li>
-          <li><a href="#team" class="smoothScroll">Productos</a></li>
-          <li><a href="#testimonial" class="smoothScroll">Reviews</a></li>
-        
-      </ul>
-    </div>
-  </div>
 </section>

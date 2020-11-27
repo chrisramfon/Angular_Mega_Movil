@@ -8,11 +8,6 @@ import { ClienteCitaComponent } from './cliente-cita/cliente-cita.component';
 const routes: Routes = [
   {path:'inicio', component:InicioSesionComponent},
   {path:'vehiculo', component:VehiculoComponent},
-
-
-
-const routes: Routes = [
-  {path:'inicio', component:InicioSesionComponent},
   {path:'cita', component:ClienteCitaComponent},
 
 
@@ -22,6 +17,8 @@ const routes: Routes = [
   {path:'**', redirectTo:'inicio',pathMatch:'full'},
   {path:'',redirectTo:'cita',pathMatch:'full'},
   {path:'**', redirectTo:'cita',pathMatch:'full'},
+  {path:'', redirectTo:'vehiculo',pathMatch:'full'},
+  {path:'**', redirectTo:'vehiculo',pathMatch:'full'}
 ];
 
 @NgModule({
