@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VehiculosService } from '../servicios/vehiculos.service';
 
 @Component({
   selector: 'app-vehiculo',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vehiculo.component.css']
 })
 export class VehiculoComponent implements OnInit {
-
-  constructor() { }
+  vehiculo = {Matricula: "", Marca: "", Modelo: "", id: ""};
+  constructor(private vehiculoServicio: VehiculosService) { }
 
   ngOnInit(): void {
   }
 
+
+  //Inicio de guardar vehículo
+  guardarVehiculo(){
+    this.vehiculoServicio.guardarVehiculo(this.vehiculo).subscribe(res=>{
+      alert("Vehículo guardado con éxito.");
+    });//Fin de guardar vehiculo
+  }
 }

@@ -12,20 +12,26 @@ import { MenuComponent } from './menu/menu.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { VehiculoComponent } from './vehiculo/vehiculo.component';
 import { SensorComponent } from './sensor/sensor.component';
+import { ClienteCitaComponent } from './cliente-cita/cliente-cita.component';
 
 //Servicios
 import { InicioSesionService } from './servicios/inicio-sesion.service';
 import {SensordistanciaService} from './servicios/sensordistancia.service'
+import { VehiculosService } from './servicios/vehiculos.service';
+import { ClienteCitaService } from './servicios/cliente-cita.service';
 
 
 @NgModule({
+
   declarations: [
     AppComponent,
     InicioSesionComponent,
     MenuComponent,
     VehiculoComponent,
-    SensorComponent
+    SensorComponent,
+    ClienteCitaComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,10 +39,15 @@ import {SensordistanciaService} from './servicios/sensordistancia.service'
     FormsModule,
     NgbModule
   ],
+
   providers: [
     InicioSesionService,
-    SensordistanciaService
+    SensordistanciaService,
+    VehiculosService,
+    ClienteCitaService
   ],
+
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

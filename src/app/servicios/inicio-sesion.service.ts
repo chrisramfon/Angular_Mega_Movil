@@ -7,6 +7,8 @@ export class InicioSesionService {
   url = "http://192.168.1.71:3000/usuario/inicio";
   @Output() change: EventEmitter<boolean> = new EventEmitter();
   @Output() change2: EventEmitter<String> = new EventEmitter();
+  @Output() change3: EventEmitter<String> = new EventEmitter();
+
   
   constructor(private http: HttpClient) { }
   //Manda los datos a la ruta de inicio de sesion de express
@@ -23,4 +25,9 @@ export class InicioSesionService {
     this.change2.emit(localStorage.getItem('Tipo'));
     return localStorage.getItem('Tipo')
   }
+idusuario(){
+  this.change3.emit(localStorage.getItem('id'));
+  return localStorage.getItem('id');
+}
+
 }

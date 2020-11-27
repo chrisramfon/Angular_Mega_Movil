@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import {SensorComponent} from './sensor/sensor.component';
 import {VehiculoComponent} from './vehiculo/vehiculo.component';
+import { ClienteCitaComponent } from './cliente-cita/cliente-cita.component';
 
 //Guardias 
 import {GuardiaLoginGuard} from './guardia-login.guard';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'inicio', component:InicioSesionComponent},
   {path:'vehiculo',component:VehiculoComponent, canActivate:[GuardiaLoginGuard]},
   {path:'arduino', component:SensorComponent, canActivate:[GuardiaLoginGuard,GuardiaTipousuGuard]},
+  {path:'cita', component:ClienteCitaComponent},
   //Mantener estas dos lineas al final
   {path:'',redirectTo:'inicio', pathMatch:'full'},
   {path:'**', redirectTo:'inicio',pathMatch:'full'}

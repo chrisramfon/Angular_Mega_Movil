@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MegaMovil"
+    }
+  },
+  "defaultProject": "MegaMovil",
+  "cli": {
+    "analytics": false
+  }
 }

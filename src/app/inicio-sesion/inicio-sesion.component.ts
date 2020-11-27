@@ -21,16 +21,18 @@ export class InicioSesionComponent implements OnInit {
         localStorage.setItem('token', datos[0]);
         localStorage.setItem('Usuario', datos[1]);
         localStorage.setItem('Tipo', datos[2]);
+        localStorage.setItem('id',datos[3]);
+
+       /* localStorage.setItem('token',JSON.stringify(this.iniciosesion))*/
         alert("Bienvenido usuario: "+datos[1]);
         this.iniciosesion.sesioniniciada();
         this.iniciosesion.tipousuario();
         this.router.navigate(['/arduino']);
-      }, 
-      err => {
+        this.iniciosesion.idusuario();
+      }, err => {
         console.log(err)
         alert("Usuario o contraseña incorrecto");
-      }
-    );
+      });
   }
 
 }
