@@ -1,0 +1,65 @@
+<div id="principal">
+    <div id="tabla-principal" >
+        <div id="tabla-contenedor" >
+            <div id="tabla-tabla" >
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td><h4>ID</h4></td>
+                                <td><h4>Fecha</h4></td>
+                                <td><h4>Motivo</h4></td>
+                                <td><h4>Estado</h4></td>
+                                <td><h4>Vehiculo</h4></td>
+                            </tr> 
+                        </thead>
+                        <tbody *ngFor = "let ct of cliente.Cita">
+                            <tr>
+                                <td> {{ct.id_cita}} </td>
+                                <td> {{ct.Fecha_Hora}} </td>
+                                <td> {{ct.Motivo}} </td>
+                                <td> {{ct.Estado}} </td>
+                                <td> {{ct.Matricula_Vehiculo}} </td>
+                            </tr>
+                        </tbody>
+                    </table>        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section id="team">
+	<div class="container">
+    	<div class="row">
+			<div class="col-md-12 col-sm-12">
+                <div class="section-title">
+                    <h2>Citas<small></small></h2>
+                </div>
+            </div>
+			<div class="col-md-3 col-sm-6">
+                <div class="team-thumb">
+                    <div class="team-image">
+                        <img src="https://i.ibb.co/R67mcJN/cita.png" class="img-responsive">
+                    </div>
+                    <div *ngFor = "let ct of cliente.Cita">
+                        <div class="team-info">
+                            <h2> Cita #{{ct.id_cita}}</h2>
+                        </div>
+                        <ul class="social-icon">
+                            <li><h3>Fecha y hora: </h3>{{ct.Fecha_Hora}}</li>
+                            <br>
+                            <li><h3>Motivo: </h3>{{ct.Motivo}}</li>
+                            <br>
+                            <li><h3>Estado: </h3>{{ct.Estado}}</li>
+                            <br>
+                            <li><h3>vehículo: </h3>{{ct.Matricula_Vehiculo}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    	</div>
+	</div>
+</section>

@@ -4,19 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { VehiculoComponent } from './vehiculo/vehiculo.component';
 import { ClienteCitaComponent } from './cliente-cita/cliente-cita.component';
-
-const routes: Routes = [
-  {path:'inicio', component:InicioSesionComponent},
-  {path:'vehiculo', component:VehiculoComponent},
-
-
+import { MiscitasComponent } from './miscitas/miscitas.component';
 
 const routes: Routes = [
   {path:'inicio', component:InicioSesionComponent},
   {path:'cita', component:ClienteCitaComponent},
-
-
-
+  {path:'vehiculo', component:VehiculoComponent},
+  {path:'miscitas', component:MiscitasComponent},
   //Mantener estas dos lineas al final
   {path:'',redirectTo:'inicio', pathMatch:'full'},
   {path:'**', redirectTo:'inicio',pathMatch:'full'},
@@ -25,7 +19,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

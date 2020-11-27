@@ -9,10 +9,10 @@
       <a href="" class="navbar-brand">MEGA</a>
     </div>
     <div class="collapse navbar-collapse" [ngbCollapse]="colapsado">
-      <ul class="nav navbar-nav navbar-nav-first">
+      <ul class="nav navbar-nav navbar-nav-first" *ngIf="entro">
         <li><a href="" class="smoothScroll">Clientes</a></li>
         <li><a href="" class="smoothScroll">Empleados</a></li>
-        <li><a href="" class="smoothScroll">Cerrar Sesión</a></li> 
+        <li><a href="" class="smoothScroll" (click)="cerrarsesion()">Cerrar Sesión</a></li> 
         
           <li><a href="#top" class="smoothScroll">Inicio</a></li>
           <li><a href="" class="smoothScroll">Nosotros</a></li>
