@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { OwlModule } from 'ngx-owl-carousel';
 
 //Componentes
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
@@ -36,7 +38,9 @@ import { MiscitasService } from './servicios/miscitas.service';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    NgxPaginationModule,
+    OwlModule
   ],
 
   providers: [
