@@ -2,7 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 //Componentes
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
+import { VehiculoComponent } from './vehiculo/vehiculo.component';
 import { ClienteCitaComponent } from './cliente-cita/cliente-cita.component';
+
+const routes: Routes = [
+  {path:'inicio', component:InicioSesionComponent},
+  {path:'vehiculo', component:VehiculoComponent},
+
 
 
 const routes: Routes = [
