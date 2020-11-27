@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class VehiculosService {
 
-  url = "http://localhost:3000/cliente/nuevovehiculo";
+  private url = "http://localhost:3000/cliente/nuevovehiculo";
 
   constructor(private http: HttpClient) { }
 
