@@ -1,0 +1,45 @@
+<p>sensor works!</p>
+<div id="media">
+    <div id="formu" align="center" style="margin-bottom: 70px">
+        <form class="entry-form">
+            <input type="text" [(ngModel)]="distancia.valor" name="valor" placeholder="Distancia" class="form-control">
+            <input type="text" [(ngModel)]="distancia.fecha" name="fecha" placeholder="Fecha" class="form-control">
+            <input type="text" [(ngModel)]="distancia.hora" name="hora" placeholder="Hora" class="form-control">
+            <br><br><br>
+
+            <input type="button" value="Actualizar distancia" (click)="verdistancia()" class="section-btn">
+            <input type="button" value="Registrar distancia" (click)="registrardistancia()" class="section-btn">
+            <input type="button" value="Todas las distancias" (click)="todasdistancias()" class="section-btn">
+        </form>
+    </div>
+</div>
+
+<div id="principal" *ngIf="tabla">
+    <div id="tabla-principal">
+        <div id="tabla-contenedor">
+            <div id="tabla-tabla">
+                <div class="table-responsive" *ngIf="tabla">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <td>CODIGO</td>
+                            <td>DISTANCIA</td>
+                            <td>FECHA</td>
+                            <td>HORA</td>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let dist of distancias |async">
+                        <tr >
+                            <td>{{ dist.Codigo }}</td>
+                            <td>{{ dist.Distancia }}</td>
+                            <td>{{ dist.Fecha_reg.substring(0,10) }}</td>
+                            <td>{{ dist.Fecha_reg.substring(11,19) }}</td>
+                        </tr>
+                    </tbody>
+                       
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

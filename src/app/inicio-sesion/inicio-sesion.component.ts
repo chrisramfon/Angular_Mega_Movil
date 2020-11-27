@@ -7,7 +7,7 @@ import { InicioSesionService } from '../servicios/inicio-sesion.service';
   styleUrls: ['./inicio-sesion.component.css']
 })
 export class InicioSesionComponent implements OnInit {
-  usuario = { Usuario:"", Contrasena:"" };
+  usuario = { Usuario:"", Contrasena:"" }
 
   constructor(private iniciosesion: InicioSesionService, private router:Router) { }
 
@@ -24,8 +24,9 @@ export class InicioSesionComponent implements OnInit {
         alert("Bienvenido usuario: "+datos[1]);
         this.iniciosesion.sesioniniciada();
         this.iniciosesion.tipousuario();
-        //this.router.navigate(['ruta']);
-      }, err => {
+        this.router.navigate(['/arduino']);
+      }, 
+      err => {
         console.log(err)
         alert("Usuario o contraseña incorrecto");
       }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
+import {InicioSesionService} from '../servicios/inicio-sesion.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   colapsado = true;
-  constructor() { }
+
+  @HostBinding('class-is-open')
+entro=false;
+Tipo="E"
+  constructor(private iniciosesion:InicioSesionService) { }
 
   ngOnInit(): void {
+    this.iniciosesion.change.subscribe(isOpen =>{
+      this.entro=isOpen;
+    })
+    this.iniciosesion.change2.subscribe(isOpen =>{
+      this.Tipo=isOpen;
+    })
+    this.entro=this.iniciosesion.sesioniniciada();
+    this.Tipo=this.iniciosesion.tipousuario();
+  }
+    
+  cerrarsesion(){
+    localStorage.removeItem('token');
+    localStorage.removeItem('Usuario');
+    localStorage.removeItem('Tipo');
+    localStorage.removeItem('id');
+    this.entro = this.iniciosesion.sesioniniciada();
   }
 
   colapsar(){

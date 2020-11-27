@@ -10,15 +10,12 @@
     </div>
     <div class="collapse navbar-collapse" [ngbCollapse]="colapsado">
       <ul class="nav navbar-nav navbar-nav-first">
-        <li><a href="" class="smoothScroll">Clientes</a></li>
-        <li><a href="" class="smoothScroll">Empleados</a></li>
-        <li><a href="" class="smoothScroll">Cerrar Sesión</a></li> 
-        
-          <li><a href="#top" class="smoothScroll">Inicio</a></li>
-          <li><a href="" class="smoothScroll">Nosotros</a></li>
-          <li><a href="#team" class="smoothScroll">Productos</a></li>
-          <li><a href="#testimonial" class="smoothScroll">Reviews</a></li>
-        
+        <li *ngIf="entro && Tipo=='C'"><a href="" class="smoothScroll" routerLink="vehiculo">Vehiculo</a></li>
+        <li *ngIf="entro && Tipo=='E'"><a href="" class="smoothScroll" routerLink="arduino">Sensor Ultrasonico</a></li>
+        <li *ngIf="entro; else esfalsa"><a href="" class="smoothScroll" (click)="cerrarsesion()">Cerrar Sesión</a></li> 
+        <ng-template #esfalsa>
+        <li> <a href="" routerLink="inicio"></a></li>
+      </ng-template>
       </ul>
     </div>
   </div>
