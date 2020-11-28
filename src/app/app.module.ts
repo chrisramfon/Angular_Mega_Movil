@@ -15,12 +15,14 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { VehiculoComponent } from './vehiculo/vehiculo.component';
 import { ClienteCitaComponent } from './cliente-cita/cliente-cita.component';
 import { MiscitasComponent } from './miscitas/miscitas.component';
+import { MisvehiculosComponent } from './misvehiculos/misvehiculos.component';
 
 //Servicios
 import { InicioSesionService } from './servicios/inicio-sesion.service';
 import { VehiculosService } from './servicios/vehiculos.service';
 import { ClienteCitaService } from './servicios/cliente-cita.service';
 import { MiscitasService } from './servicios/miscitas.service';
+import { MisvehiculosService } from './servicios/misvehiculos.service';
 
 @NgModule({
 
@@ -30,7 +32,9 @@ import { MiscitasService } from './servicios/miscitas.service';
     MenuComponent,
     VehiculoComponent,
     ClienteCitaComponent,
-    MiscitasComponent
+    MiscitasComponent,
+    MisvehiculosComponent
+
   ],
 
   imports: [
@@ -47,7 +51,8 @@ import { MiscitasService } from './servicios/miscitas.service';
     InicioSesionService,
     VehiculosService,
     ClienteCitaService,
-    MiscitasService
+    MiscitasService,
+    MisvehiculosService
   ],
 
   bootstrap: [AppComponent]

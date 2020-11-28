@@ -1,0 +1,63 @@
+<!-- Imagen -->
+<section id="home">
+    <section id="home">
+        <div class="row">
+            <owl-carousel [options]="SlideOptions" [carouselClasses]="['owl-theme', 'sliding']">
+                <div class="owl-theme home-slider">
+                    <div class="item item-indexvehiculos">
+                        <div class="caption">
+                            <div class="container">
+                                <div class="col-md-6 col-sm-12">
+                                    <h1 style="color: black; background-color: white; opacity: .6; margin: 0; ">Clientes</h1>
+                                    <h3 style="color: black; background-color: white; opacity: .6; margin: 0;">Aqui encontrarás la información de los clientes registrados</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </owl-carousel>
+        </div>
+    </section>
+</section>
+<div class="container" style="padding: 10%; margin: 0">
+    <input style="background-color:  #252020; margin: 10px; width: 90%" type="button" name="nueva" class="" (click)="nuevovehiculo()" class="section-btn" value="Agregar nuevo vehiculo">
+</div>
+<section id="team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="section-title">
+                    <h2>Mis Vehículos<small></small></h2>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="team-thumb">
+                    <div class="team-image">
+                        <img src="https://i.ibb.co/s12D63W/vehiculo.png" class="img-responsive">
+                    </div>
+                    <div *ngFor="let vh of cliente.Vehiculo | paginate:{itemsPerPage: 3, currentPage: p} ">
+                        <div class="team-info">
+                            <h2 style="border-bottom: color: black; height: 10px"> Matricula del Vehiculo: <br>{{vh.Matricula}}</h2>
+
+                        </div>
+                        <br>
+                        <ul class="social-icon">
+                            <li>
+                                <h3>Marca del Vehículo: </h3><br>{{vh.Marca}}</li>
+
+                            <br>
+                            <li>
+                                <h3>Modelo del Vehículos: </h3><br> {{vh.Modelo}}
+                            </li>
+                            <br>
+
+                            <br>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</section>

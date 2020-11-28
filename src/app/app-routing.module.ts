@@ -5,12 +5,14 @@ import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { VehiculoComponent } from './vehiculo/vehiculo.component';
 import { ClienteCitaComponent } from './cliente-cita/cliente-cita.component';
 import { MiscitasComponent } from './miscitas/miscitas.component';
+import { MisvehiculosComponent } from './misvehiculos/misvehiculos.component';
 
 const routes: Routes = [
   {path:'inicio', component:InicioSesionComponent},
   {path:'cita', component:ClienteCitaComponent},
   {path:'vehiculo', component:VehiculoComponent},
   {path:'miscitas', component:MiscitasComponent},
+  {path:'misvehiculos', component:MisvehiculosComponent},
   
   //Mantener estas dos lineas al final
   {path:'',redirectTo:'inicio', pathMatch:'full'},
@@ -18,7 +20,11 @@ const routes: Routes = [
   {path:'',redirectTo:'cita',pathMatch:'full'},
   {path:'**', redirectTo:'cita',pathMatch:'full'},
   {path:'', redirectTo:'vehiculo',pathMatch:'full'},
-  {path:'**', redirectTo:'vehiculo',pathMatch:'full'}
+  {path:'**', redirectTo:'vehiculo',pathMatch:'full'},
+  {path:'',redirectTo:'miscitas', pathMatch:'full'},
+  {path:'**', redirectTo:'miscitas', pathMatch:'full'},
+  {path:'',redirectTo:'misvehiculos', pathMatch:'full'},
+  {path:'**', redirectTo:'misvehiculos', pathMatch:'full'},
 ];
 
 @NgModule({
