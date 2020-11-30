@@ -198,6 +198,15 @@ https://templatemo.com/tm-516-known
   }
 
   .entry-form {
+    background: #252020;
+    border-radius: 0%;
+    text-align: center;
+    padding: 3em;
+    width: 450px;
+    height: auto;
+  }
+
+  .entry-formmm {
     background: white;
     border-radius: 0%;
     text-align: center;

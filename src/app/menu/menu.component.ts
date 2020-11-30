@@ -1,4 +1,5 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {InicioSesionService} from '../servicios/inicio-sesion.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class MenuComponent implements OnInit {
   @HostBinding('class-is-open')
 entro=false;
 Tipo="E"
-  constructor(private iniciosesion:InicioSesionService) { }
+  constructor(private iniciosesion:InicioSesionService, private router:Router) { }
 
   ngOnInit(): void {
     this.iniciosesion.change.subscribe(isOpen =>{
@@ -30,7 +31,9 @@ Tipo="E"
     localStorage.removeItem('Usuario');
     localStorage.removeItem('Tipo');
     localStorage.removeItem('id');
+    alert("¿Estas seguro que quieres cerrar sesión?");
     this.entro = this.iniciosesion.sesioniniciada();
+    this.router.navigate(['/inicio']);
   }
 
   colapsar(){
