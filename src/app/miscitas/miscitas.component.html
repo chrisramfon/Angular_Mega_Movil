@@ -1,58 +1,63 @@
-    <!-- Imagen -->
-     <section id="home">
-        <section id="home">
-            <div class="row">
-                <owl-carousel [options]="SlideOptions" [carouselClasses]="['owl-theme', 'sliding']" > 
-                    <div class="owl-theme home-slider">
-                        <div class="item item-indexcitas">
-                            <div class="caption">
-                                <div class="container">
-                                    <div class="col-md-6 col-sm-12">
-                                        <h1 style="color: black; background-color: white; opacity: .6; margin: 0; ">Clientes</h1>
-                                        <h3 style="color: black; background-color: white; opacity: .6; margin: 0;">Aqui encontrarás la información de los clientes registrados</h3>
-                                    </div>         
+<!-- Imagen -->
+<section id="home">
+    <section id="home">
+        <div class="row">
+            <owl-carousel [options]="SlideOptions" [carouselClasses]="['owl-theme', 'sliding']">
+                <div class="owl-theme home-slider">
+                    <div class="item item-indexcitas">
+                        <div class="caption">
+                            <div class="container">
+                                <div class="col-md-6 col-sm-12">
+                                    <h1 style="color: black; background-color: white; opacity: .6; margin: 0; ">Clientes</h1>
+                                    <h3 style="color: black; background-color: white; opacity: .6; margin: 0;">Aqui encontrarás la información de los clientes registrados</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </owl-carousel>
-            </div>
-        </section>
+                </div>
+            </owl-carousel>
+        </div>
     </section>
-<div class="container" style="padding: 10%; margin: 0">
-    <input style="background-color:  #252020; margin: 10px; width: 90%" type="button" name="nueva" class="" (click) = "nuevacita()" class="section-btn" value="Crear una cita">
-</div>
+</section>
+
 <section id="team">
-	<div class="container">
-    	<div class="row">
-			<div class="col-md-12 col-sm-12">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
                 <div class="section-title">
-                    <h2>Citas<small></small></h2>
+                    <h2>Mis citas registradas<small></small></h2>
+                    <div class="container" style="padding: 10%; margin: 0">
+                        <input style="background-color:  #252020; margin: 10px; width: 90%" type="button" name="nueva" class="" (click)="nuevacita()" class="section-btn" value="Crear una cita">
+                    </div>
                 </div>
             </div>
-			<div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6">
                 <div class="team-thumb">
                     <div class="team-image">
                         <img src="https://i.ibb.co/R67mcJN/cita.png" class="img-responsive">
                     </div>
-                    <div *ngFor = "let ct of cliente.Cita | paginate:{itemsPerPage: 3, currentPage: p} ">
+                    <div *ngFor="let ct of cliente.Cita | paginate:{itemsPerPage: 3, currentPage: p} ">
                         <div class="team-info">
                             <h2 style="border-bottom: color: black; height: 10px"> Cita #{{ct.id_cita}}</h2>
                         </div>
                         <ul class="social-icon">
-                            <li><h3>Fecha y hora: </h3>{{ct.Fecha_Hora}}</li>
+                            <li>
+                                <h3>Fecha y hora: </h3>{{ct.Fecha_Hora}}</li>
                             <br>
-                            <li><h3>Motivo: </h3>{{ct.Motivo}}</li>
+                            <li>
+                                <h3>Motivo: </h3>{{ct.Motivo}}</li>
                             <br>
-                            <li><h3>Estado: </h3>{{ct.Estado}}</li>
+                            <li>
+                                <h3>Estado: </h3>{{ct.Estado}}</li>
                             <br>
-                            <li><h3>vehículo: </h3>{{ct.Matricula_Vehiculo}}</li>
+                            <li>
+                                <h3>vehículo: </h3>{{ct.Matricula_Vehiculo}}</li>
                         </ul>
                     </div>
 
                 </div>
             </div>
-    	</div>
-	</div>
+        </div>
+    </div>
     <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </section>

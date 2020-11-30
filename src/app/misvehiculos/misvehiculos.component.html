@@ -19,39 +19,42 @@
         </div>
     </section>
 </section>
-<div class="container" style="padding: 10%; margin: 0">
-    <input style="background-color:  #252020; margin: 10px; width: 90%" type="button" name="nueva" class="" (click)="nuevovehiculo()" class="section-btn" value="Agregar nuevo vehiculo">
-</div>
 <section id="team">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <div class="section-title">
                     <h2>Mis Vehículos<small></small></h2>
+
+                    <input style="background-color:  #252020; margin: 10px; width: 90%" type="button" name="nueva" class="" (click)="nuevovehiculo()" class="section-btn" value="Agregar nuevo vehiculo">
+
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="team-thumb">
                     <div class="team-image">
-                        <img src="https://i.ibb.co/s12D63W/vehiculo.png" class="img-responsive">
+                        <img src="assets/img/carro.jpg" class="img-responsive">
                     </div>
                     <div *ngFor="let vh of cliente.Vehiculo | paginate:{itemsPerPage: 3, currentPage: p} ">
-                        <div class="team-info">
-                            <h2 style="border-bottom: color: black; height: 10px"> Matricula del Vehiculo: <br>{{vh.Matricula}}</h2>
 
+                        <!--MATRICULA DEL VEHICULO-->
+                        <div class="social-icon">
+                            <h3> Matricula del VehÍculo:</h3>
                         </div>
-                        <br>
+                        {{vh.Matricula}}
+
+                        <!--MARCA DEL VEHICULO-->
                         <ul class="social-icon">
-                            <li>
-                                <h3>Marca del Vehículo: </h3><br>{{vh.Marca}}</li>
+                            <div>
+                                <h3>Marca del Vehículo: </h3>
+                            </div>
+                            {{vh.Marca}}
 
-                            <br>
-                            <li>
-                                <h3>Modelo del Vehículos: </h3><br> {{vh.Modelo}}
-                            </li>
-                            <br>
-
-                            <br>
+                            <!--MODELO DEL VEHICULO-->
+                            <div>
+                                <h3>Modelo del Vehículo: </h3>
+                                {{vh.Modelo}}
+                            </div>
                         </ul>
                     </div>
 
