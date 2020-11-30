@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class InicioSesionService {
-  url = "http://localhost:3000/usuario/iniciocliente";
+  url = "http://192.168.1.71:3000/usuario/inicio";
   @Output() change: EventEmitter<boolean> = new EventEmitter();
   @Output() change2: EventEmitter<String> = new EventEmitter();
   @Output() change3: EventEmitter<String> = new EventEmitter();
@@ -18,12 +18,12 @@ export class InicioSesionService {
 
   sesioniniciada(){
     this.change.emit(!!localStorage.getItem('token'));
-    return !!localStorage.getItem('token');
+    return !!localStorage.getItem('token')
   }
 
   tipousuario(){
-    this.change2.emit(localStorage.getItem('tipo'));
-    return localStorage.getItem('tipo');
+    this.change2.emit(localStorage.getItem('Tipo'));
+    return localStorage.getItem('Tipo')
   }
 idusuario(){
   this.change3.emit(localStorage.getItem('id'));

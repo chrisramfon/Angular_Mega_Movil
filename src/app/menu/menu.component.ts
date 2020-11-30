@@ -1,5 +1,7 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import {InicioSesionService} from '../servicios/inicio-sesion.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -9,9 +11,9 @@ export class MenuComponent implements OnInit {
   colapsado = true;
   @HostBinding('class.is-open')
   entro = false;
-  Tipo = "C";
+  Tipo;
 
-  constructor(private iniciosesion: InicioSesionService) { }
+  constructor(private iniciosesion:InicioSesionService, private router:Router) { }
 
   ngOnInit(): void {
     this.iniciosesion.change.subscribe(isOpen => {
