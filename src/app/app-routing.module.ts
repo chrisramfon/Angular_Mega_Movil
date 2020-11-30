@@ -9,12 +9,13 @@ import { ClienteCitaComponent } from './cliente-cita/cliente-cita.component';
 //Guardias 
 import {GuardiaLoginGuard} from './guardia-login.guard';
 import {GuardiaTipousuGuard} from './guardia-tipousu.guard';
+import {TipusuGuard} from './tipusu.guard';
 
 const routes: Routes = [
   {path:'inicio', component:InicioSesionComponent},
-  {path:'vehiculo',component:VehiculoComponent, canActivate:[GuardiaLoginGuard]},
+  {path:'vehiculo',component:VehiculoComponent, canActivate:[GuardiaLoginGuard, TipusuGuard]},
   {path:'arduino', component:SensorComponent, canActivate:[GuardiaLoginGuard,GuardiaTipousuGuard]},
-  {path:'cita', component:ClienteCitaComponent},
+  {path:'nuevacita', component:ClienteCitaComponent, canActivate:[GuardiaLoginGuard, TipusuGuard]},
   //Mantener estas dos lineas al final
   {path:'',redirectTo:'inicio', pathMatch:'full'},
   {path:'**', redirectTo:'inicio',pathMatch:'full'}

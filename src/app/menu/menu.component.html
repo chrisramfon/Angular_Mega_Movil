@@ -10,6 +10,7 @@
     </div>
     <div class="collapse navbar-collapse" [ngbCollapse]="colapsado">
       <ul class="nav navbar-nav navbar-nav-first">
+        <li *ngIf="entro && Tipo=='C'"><a href="" class="smoothScroll" routerLink="nuevacita">Citas</a></li>
         <li *ngIf="entro && Tipo=='C'"><a href="" class="smoothScroll" routerLink="vehiculo">Vehiculo</a></li>
         <li *ngIf="entro && Tipo=='E'"><a href="" class="smoothScroll" routerLink="arduino">Sensor Ultrasonico</a></li>
         <li *ngIf="entro; else esfalsa"><a href="" class="smoothScroll" (click)="cerrarsesion()">Cerrar Sesión</a></li> 

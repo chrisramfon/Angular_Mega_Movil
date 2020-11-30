@@ -6,21 +6,20 @@ import {InicioSesionService} from './servicios/inicio-sesion.service';
 @Injectable({
   providedIn: 'root'
 })
-export class GuardiaTipousuGuard implements CanActivate {
+export class TipusuGuard implements CanActivate {
 
-  constructor(private router:Router, private iniciosesion:InicioSesionService){}
+  constructor(private iniciosesion:InicioSesionService,private router:Router){}
   /*canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return true;
   }*/
- 
+  
   canActivate(): boolean{
-    if(this.iniciosesion.tipousuario()=='E'){
+    if(this.iniciosesion.tipousuario()=='C'){
       return true
     }else{
-      this.router.navigate(['/arduinos'])
+      this.router.navigate(['/nuevacita'])
     }
   }
-
 }

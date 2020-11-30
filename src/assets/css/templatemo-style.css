@@ -47,6 +47,9 @@ https://templatemo.com/tm-516-known
   h3 a {
     color: #454545;
   }
+  h4{
+    color: #EA4D1A;
+  }
 
   p {
     color: #757575;
@@ -54,6 +57,14 @@ https://templatemo.com/tm-516-known
     font-weight: normal;
     line-height: 24px;
   }
+
+  .spacer { 
+    -webkit-box-flex: 1; 
+    -ms-flex: 1 1 auto; 
+    flex: 1 1 auto; 
+    background-size: #EA4D1A;
+  align-content: center;
+}
 
 .alerta{
   font-size: 1em;
@@ -187,12 +198,23 @@ https://templatemo.com/tm-516-known
   }
 
   .entry-form {
-    background: #252020;
+    background: white;
     border-radius: 0%;
     text-align: center;
     padding: 3em;
     width: 450px;
     height: auto;
+  }
+
+  .entry-formm {
+    background: #252020;
+    border-radius: 100px;
+    border: 1px solid #cc4f06;
+    color: white;
+    font-size: inherit;
+    font-weight: normal;
+    padding: 10px 45px;
+    transition: 0.5s;
   }
 
 
@@ -261,9 +283,9 @@ https://templatemo.com/tm-516-known
   -----------------------------------------*/
 
   .section-btn {
-    background: transparent;
+    background: #252020;
     border-radius: 50px;
-    border: 1px solid #ffffff;
+    border: 1px solid #cc4f06;
     color: #ffffff;
     font-size: inherit;
     font-weight: normal;
