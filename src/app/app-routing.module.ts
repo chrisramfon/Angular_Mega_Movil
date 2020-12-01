@@ -6,6 +6,7 @@ import { VehiculoComponent } from './vehiculo/vehiculo.component';
 import { ClienteCitaComponent } from './cliente-cita/cliente-cita.component';
 import { MiscitasComponent } from './miscitas/miscitas.component';
 import { MisvehiculosComponent } from './misvehiculos/misvehiculos.component';
+import { MiInfoClienteComponent } from './mi-info-cliente/mi-info-cliente.component';
 
 const routes: Routes = [
   {path:'inicio', component:InicioSesionComponent},
@@ -13,18 +14,11 @@ const routes: Routes = [
   {path:'vehiculo', component:VehiculoComponent},
   {path:'miscitas', component:MiscitasComponent},
   {path:'misvehiculos', component:MisvehiculosComponent},
+  {path:'miinfocliente', component:MiInfoClienteComponent},
   
   //Mantener estas dos lineas al final
   {path:'',redirectTo:'inicio', pathMatch:'full'},
-  {path:'**', redirectTo:'inicio',pathMatch:'full'},
-  {path:'',redirectTo:'cita',pathMatch:'full'},
-  {path:'**', redirectTo:'cita',pathMatch:'full'},
-  {path:'', redirectTo:'vehiculo',pathMatch:'full'},
-  {path:'**', redirectTo:'vehiculo',pathMatch:'full'},
-  {path:'',redirectTo:'miscitas', pathMatch:'full'},
-  {path:'**', redirectTo:'miscitas', pathMatch:'full'},
-  {path:'',redirectTo:'misvehiculos', pathMatch:'full'},
-  {path:'**', redirectTo:'misvehiculos', pathMatch:'full'},
+  {path:'**', redirectTo:'inicio',pathMatch:'full'}
 ];
 
 @NgModule({

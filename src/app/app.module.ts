@@ -16,6 +16,7 @@ import { VehiculoComponent } from './vehiculo/vehiculo.component';
 import { ClienteCitaComponent } from './cliente-cita/cliente-cita.component';
 import { MiscitasComponent } from './miscitas/miscitas.component';
 import { MisvehiculosComponent } from './misvehiculos/misvehiculos.component';
+import { MiInfoClienteComponent } from './mi-info-cliente/mi-info-cliente.component';
 
 //Servicios
 import { InicioSesionService } from './servicios/inicio-sesion.service';
@@ -23,6 +24,7 @@ import { VehiculosService } from './servicios/vehiculos.service';
 import { ClienteCitaService } from './servicios/cliente-cita.service';
 import { MiscitasService } from './servicios/miscitas.service';
 import { MisvehiculosService } from './servicios/misvehiculos.service';
+import { EditarinfoClienteService } from './servicios/editarinfo-cliente.service'
 
 @NgModule({
 
@@ -33,7 +35,8 @@ import { MisvehiculosService } from './servicios/misvehiculos.service';
     VehiculoComponent,
     ClienteCitaComponent,
     MiscitasComponent,
-    MisvehiculosComponent
+    MisvehiculosComponent,
+    MiInfoClienteComponent
 
   ],
 
@@ -52,7 +55,8 @@ import { MisvehiculosService } from './servicios/misvehiculos.service';
     VehiculosService,
     ClienteCitaService,
     MiscitasService,
-    MisvehiculosService
+    MisvehiculosService,
+    EditarinfoClienteService
   ],
 
   bootstrap: [AppComponent]
