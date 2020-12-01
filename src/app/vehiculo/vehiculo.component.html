@@ -8,12 +8,11 @@
             <br>
             <form id="registroCita" class="entry-form">
 
-                <input name = "Matricula"
-                 [(ngModel)]="vehiculo.Matricula" type="text" placeholder="Matricula" value="{{vehiculo.Matricula}}" class="form-control">
+                <input name="Matricula" [(ngModel)]="vehiculo.Matricula" type="text" placeholder="Matricula" value="{{vehiculo.Matricula}}" class="form-control">
 
                 <input name="Marca" [(ngModel)]="vehiculo.Marca" type="text" placeholder="Marca" value="{{vehiculo.Marca}}" class="form-control">
 
-                <input name="Modelo" [(ngModel)]="vehiculo.Modelo" type="text" placeholder="Motivo de la cita" value="{{vehiculo.Modelo}}" class="form-control">
+                <input name="Modelo" [(ngModel)]="vehiculo.Modelo" type="text" placeholder="Modelo" value="{{vehiculo.Modelo}}" class="form-control">
 
                 <input name="guardarVehiculo" type="button" (click)="guardarVehiculo()" value="Registrar vehìculo" class="section-btn">
 
