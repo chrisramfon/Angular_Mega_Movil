@@ -20,11 +20,15 @@ export class ClienteCitaComponent implements OnInit{
     Matricula_Vehiculo:"",
     id:""
   }
+  cliente = {id: "", Nombre: "", Apellido1: "", Apellido2: "", Direccion: "", Telefono: "", Estado: "",
+            Vehiculo: [{Matricula: "", Marca: "", Modelo: ""}] 
+          };
   cita2
 
   constructor(private ClienteCitaService:ClienteCitaService){ }
 
 ngOnInit(): void {
+  this.consultarCliente();
 }
 registrarcita(){
 this.cita.id=localStorage.getItem('id');
@@ -48,5 +52,12 @@ this.cita.id=localStorage.getItem('id');
     this.cita.id_Empleado=""
     this.cita.Matricula_Vehiculo=""
 
+  }
+
+  consultarCliente(){
+    this.cliente.id = localStorage.getItem("id");
+    this.ClienteCitaService.consultarCliente(this.cliente).subscribe(res=>{
+      this.cliente = res;
+    }, err=>console.log(err));
   }
 }

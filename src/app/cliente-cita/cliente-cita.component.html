@@ -27,7 +27,11 @@
 
 
                 <!--MATRICULA DEL VEHÍHCULO-->
-                <input [(ngModel)]="cita.Matricula_Vehiculo" type="text" placeholder="Matricula del Vehiculo" value="{{cita.Matricula_Vehiculo}}" class="form-control" name="Matricula_Vehiculo" required>
+                <div class="custom-select">
+                    <select name="matri" id="matri" [(ngModel)] = "cita.Matricula_Vehiculo">
+                        <option value="{{vehi.Matricula}}" *ngFor = "let vehi of cliente.Vehiculo" > {{vehi.Matricula}} </option>
+                    </select>
+                </div>
 
 
                 <!--BOTON DE REGISTRAR-->
