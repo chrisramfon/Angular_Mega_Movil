@@ -11,6 +11,8 @@ import {SensorComponent} from './sensor/sensor.component';
 import {VehiculoComponent} from './vehiculo/vehiculo.component';
 import { ClienteCitaComponent } from './cliente-cita/cliente-cita.component';
 import { MiscitasComponent } from './miscitas/miscitas.component';
+import { MisvehiculosComponent } from './misvehiculos/misvehiculos.component';
+import { MiInfoClienteComponent } from './mi-info-cliente/mi-info-cliente.component';
 
 const routes: Routes = [
   {path:'inicio', component:InicioSesionComponent},
@@ -18,10 +20,11 @@ const routes: Routes = [
   {path:'miscitas', component:MiscitasComponent},
   {path:'vehiculo',component:VehiculoComponent, canActivate:[GuardiaLoginGuard, TipusuGuard]},
   {path:'arduino', component:SensorComponent, canActivate:[GuardiaLoginGuard,GuardiaTipousuGuard]},
+  {path:'misvehiculos', component:MisvehiculosComponent},
+  {path:'miinfocliente', component:MiInfoClienteComponent},
   //Mantener estas dos lineas al final
   {path:'',redirectTo:'inicio', pathMatch:'full'},
   {path:'**', redirectTo:'inicio',pathMatch:'full'}
-  
 ];
 
 @NgModule({
