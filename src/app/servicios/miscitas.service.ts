@@ -10,7 +10,7 @@ export class MiscitasService {
   constructor(private http: HttpClient) { }
 
   //Consultar un solo cliente
-  consultarCliente(cliente){
+  consultarCliente(cliente){ 
     return this.http.get<any>(this.url+"/"+cliente.id);
    }
 }

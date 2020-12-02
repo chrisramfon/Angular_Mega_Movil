@@ -18,7 +18,7 @@ export class InicioSesionService {
 
   sesioniniciada(){
     this.change.emit(!!localStorage.getItem('token'));
-    return !!localStorage.getItem('token')
+    return !!localStorage.getItem('token') 
   }
 
   tipousuario(){

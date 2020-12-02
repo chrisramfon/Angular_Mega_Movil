@@ -11,6 +11,6 @@ export class VehiculosService {
   constructor(private http: HttpClient) { }
 
   guardarVehiculo(vehiculo){
-    return this.http.put<any>(this.url, vehiculo);
+    return this.http.put<any>(this.url,vehiculo);
   }
-}
+} 

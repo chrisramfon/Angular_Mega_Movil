@@ -196,6 +196,11 @@ https://templatemo.com/tm-516-known
     width: 100%;
     height: 100%;
   }
+/*Imagen inicio de sesión*/
+  .imgIni{
+    padding-left: 45%;
+    padding-right: 40%;
+  }
 
   .entry-form {
     background: #252020;
@@ -205,26 +210,30 @@ https://templatemo.com/tm-516-known
     width: 450px;
     height: auto;
   }
+/*Formulario de Inicio de sesión*/
+.entry-formmm {
+  background: white;
+  border-radius: 0%;
+  text-align: center;
+  padding: 3em;
+  width: 450px;
+  height: auto;
+}
 
-  .entry-formmm {
-    background: white;
-    border-radius: 0%;
-    text-align: center;
-    padding: 3em;
-    width: 450px;
-    height: auto;
-  }
-
-  .entry-formm {
-    background: #252020;
-    border-radius: 100px;
-    border: 1px solid #cc4f06;
-    color: white;
-    font-size: inherit;
-    font-weight: normal;
-    padding: 10px 45px;
-    transition: 0.5s;
-  }
+.entry-formm {
+  background: #252020;
+  border-radius: 50px;
+  border: 1px solid #cc4f06;
+  color: white;
+  font-size: inherit;
+  font-weight: normal;
+  padding: 10px 45px;
+  transition: 0.5s;
+}
+.entry-fromm:hover{
+  background: #EA4D1A;
+    border-color: transparent;
+}
 
 
 

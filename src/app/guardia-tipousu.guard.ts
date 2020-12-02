@@ -19,7 +19,7 @@ export class GuardiaTipousuGuard implements CanActivate {
     if(this.iniciosesion.tipousuario()=='E'){
       return true
     }else{
-      this.router.navigate(['/arduinos'])
+      this.router.navigate(['/arduino'])
     }
   }
 

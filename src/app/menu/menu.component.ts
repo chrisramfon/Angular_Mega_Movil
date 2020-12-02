@@ -32,6 +32,7 @@ export class MenuComponent implements OnInit {
     localStorage.removeItem('Tipo');
     localStorage.removeItem('id');
     this.entro = this.iniciosesion.sesioniniciada();
+    this.router.navigate(['/inicio']);
   }
 
   colapsar(){

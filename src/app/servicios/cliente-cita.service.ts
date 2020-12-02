@@ -11,7 +11,7 @@ export class ClienteCitaService {
  private url = "http://192.168.1.71:3000/cliente/nuevacita";
   
 
- private UrlMisCitas= "http://192.168.1.71:3000/cliente/"
+ private UrlMisCitas= "http://192.168.1.71:3000/cliente/";
 
   constructor(private http: HttpClient){}
 

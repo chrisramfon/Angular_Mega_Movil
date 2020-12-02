@@ -25,7 +25,7 @@ export class InicioSesionComponent implements OnInit {
 
        /* localStorage.setItem('token',JSON.stringify(this.iniciosesion))*/
         alert("Bienvenido usuario: "+datos[1]);
-        this.iniciosesion.sesioniniciada();
+        this.iniciosesion.sesioniniciada();x
         this.iniciosesion.tipousuario();
         this.router.navigate(['/arduino']);
         this.iniciosesion.idusuario();

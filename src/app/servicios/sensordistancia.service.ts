@@ -12,7 +12,7 @@ export class SensordistanciaService {
     return this.http.get<any>(this.urlsensor+"/verdistancia")
   }
 
-  registrardistancia(distancia){
+  registrardistancia(distancia){ 
     return this.http.post<any>(this.urlsensor,distancia)
   }
 

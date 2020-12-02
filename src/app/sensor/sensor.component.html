@@ -11,7 +11,7 @@
             <input type="button" value="Registrar distancia" (click)="registrardistancia()" class="section-btn">
             <input type="button" value="Todas las distancias" (click)="todasdistancias()" class="section-btn">
         </form>
-    </div>
+    </div> 
 </div>
 
 <div id="principal" *ngIf="tabla">
@@ -22,10 +22,10 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <td>CODIGO</td>
-                            <td>DISTANCIA</td>
-                            <td>FECHA</td>
-                            <td>HORA</td>
+                            <td><h4>CODIGO</h4></td>
+                            <td><h4>DISTANCIA</h4></td>
+                            <td><h4>FECHA</h4></td>
+                            <td><h4>HORA</h4></td>
                         </tr>
                     </thead>
                     <tbody *ngFor="let dist of distancias |async">
@@ -42,4 +42,5 @@
             </div>
         </div>
     </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>

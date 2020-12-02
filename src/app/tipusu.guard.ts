@@ -19,7 +19,7 @@ export class TipusuGuard implements CanActivate {
     if(this.iniciosesion.tipousuario()=='C'){
       return true
     }else{
-      this.router.navigate(['/miscita'])
+      this.router.navigate(['/miscitas'])
     }
   }
 }
