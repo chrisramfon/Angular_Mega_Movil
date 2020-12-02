@@ -14,11 +14,19 @@ tabla;
     fecha:"",
     hora:""
   }
+
+  p: number = 1;
+  
   constructor(private distanciaServicio:SensordistanciaService) { }
 
   ngOnInit(): void {
     this.verdistancia()
   }
+
+    //Elementos de owl-carousel
+   title = 'owlcarouselinAngular';
+   SlideOptions = { items: 1, dots: true, nav: true }; 
+   //Fin de elementos owl-carousel
 
   verdistancia(){
     this.distanciaServicio.verdistancia()
