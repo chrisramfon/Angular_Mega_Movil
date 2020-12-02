@@ -556,6 +556,12 @@ https://templatemo.com/tm-516-known
     background-image: url(../images/IndexClientes.jpg);
   background-position: center;
   }
+
+  .home-slider .item-indexarduino {
+    background-image: url(../images/arduino.jpg);
+  background-position: center;
+  }
+
    .home-slider .item-rcliente {
     background-image: url(../images/RegistroCliente.jpg);
   background-position: center;

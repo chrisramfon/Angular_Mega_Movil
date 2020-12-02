@@ -1,14 +1,45 @@
-
+<!-- Imagen -->
+<section id="home">
+    <section id="home">
+        <div class="row">
+            <owl-carousel [options]="SlideOptions" [carouselClasses]="['owl-theme', 'sliding']">
+                <div class="owl-theme home-slider">
+                    <div class="item item-indexarduino">
+                        <div class="caption">
+                            <div class="container">
+                                <div class="col-md-6 col-sm-12">
+                                    <h1 style="color: black; background-color: white; opacity: .6; margin: 0; ">Registro de llegada</h1>
+                                    <h3 style="color: black; background-color: white; opacity: .6; margin: 0;">Registra la hora de llegada de un vehículo cuando este se encuentre aparcado en el lugar de estacionamiento. Almacena la distancia, fecha y hora al momento de la llegada del vehiculo.  </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </owl-carousel>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="titulo" class="section-tittle" align="center" style="margin-top: 70px;">
+        <h2>Captura los datos</h2>
+    </div>
+</section>
 <div id="media">
     <div id="formu" align="center" style="margin-bottom: 70px">
         <form class="entry-form">
             <input type="text" [(ngModel)]="distancia.valor" name="valor" placeholder="Distancia" class="form-control">
-            <input type="text" [(ngModel)]="distancia.fecha" name="fecha" placeholder="Fecha" class="form-control">
-            <input type="text" [(ngModel)]="distancia.hora" name="hora" placeholder="Hora" class="form-control">
+            <input type="date" [(ngModel)]="distancia.fecha" name="fecha" placeholder="Fecha" class="form-control">
+            <input type="time" [(ngModel)]="distancia.hora" name="hora" placeholder="Hora" class="form-control">
             <br><br><br>
 
             <input type="button" value="Actualizar distancia" (click)="verdistancia()" class="section-btn">
+            <br>
+            <br>
             <input type="button" value="Registrar distancia" (click)="registrardistancia()" class="section-btn">
+            <br>
+            <br>
             <input type="button" value="Todas las distancias" (click)="todasdistancias()" class="section-btn">
         </form>
     </div> 

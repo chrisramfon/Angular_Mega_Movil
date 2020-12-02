@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class SensordistanciaService {
-  private urlsensor="http://192.168.1.71:3000/arduino"
+  private urlsensor="http://localhost:3000/arduino"
   constructor(private http:HttpClient) { }
 
   verdistancia(){
