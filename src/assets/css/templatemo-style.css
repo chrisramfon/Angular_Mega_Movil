@@ -83,9 +83,7 @@ https://templatemo.com/tm-516-known
   border-color: #555555;
 }
 
-.custom-select select {
-  display: none;
-}
+
 
 .select-selected {
   background-color: #252020;
@@ -220,20 +218,16 @@ https://templatemo.com/tm-516-known
   height: auto;
 }
 
-.entry-formm {
-  background: #252020;
-  border-radius: 50px;
-  border: 1px solid #cc4f06;
-  color: white;
-  font-size: inherit;
-  font-weight: normal;
-  padding: 10px 45px;
-  transition: 0.5s;
-}
-.entry-fromm:hover{
-  background: #EA4D1A;
-    border-color: transparent;
-}
+  .entry-form-inicio {
+    background: #252020;
+    border-radius: 100px;
+    border: 1px solid #cc4f06;
+    color: white;
+    font-size: inherit;
+    font-weight: normal;
+    padding: 10px 45px;
+    transition: 0.5s;
+  }
 
 
 

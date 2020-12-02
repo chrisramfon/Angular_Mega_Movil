@@ -1,0 +1,66 @@
+<!-- Imagen -->
+<section id="home">
+    <section id="home">
+        <div class="row">
+            <owl-carousel [options]="SlideOptions" [carouselClasses]="['owl-theme', 'sliding']">
+                <div class="owl-theme home-slider">
+                    <div class="item item-indexvehiculos">
+                        <div class="caption">
+                            <div class="container">
+                                <div class="col-md-6 col-sm-12">
+                                    <h1 style="color: black; background-color: white; opacity: .6; margin: 0; ">Mis vehículos</h1>
+                                    <h3 style="color: black; background-color: white; opacity: .6; margin: 0;">Aquí encontraras información sobre tus vehículos registrados.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </owl-carousel>
+        </div>
+    </section>
+</section>
+<section id="team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="section-title">
+                    <h2>Mis Vehículos<small></small></h2>
+
+                    <input style="background-color:  #252020; margin: 10px; width: 90%" type="button" name="nueva" class="" (click)="nuevovehiculo()" class="section-btn" value="Agregar nuevo vehiculo">
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="team-thumb">
+                    <div class="team-image">
+                        <img src="assets/img/carro.jpg" class="img-responsive">
+                    </div>
+                    <div *ngFor="let vh of cliente.Vehiculo | paginate:{itemsPerPage: 3, currentPage: p} ">
+
+                        <!--MATRICULA DEL VEHICULO-->
+                        <div class="social-icon">
+                            <h3> Matricula del Vehículo:</h3>
+                        </div>
+                        {{vh.Matricula}}
+
+                        <!--MARCA DEL VEHICULO-->
+                        <ul class="social-icon">
+                            <div>
+                                <h3>Marca: </h3>
+                            </div>
+                            {{vh.Marca}}
+
+                            <!--MODELO DEL VEHICULO-->
+                            <div>
+                                <h3>Modelo: </h3>
+                                {{vh.Modelo}}
+                            </div>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</section>

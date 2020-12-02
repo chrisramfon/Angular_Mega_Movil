@@ -1,4 +1,4 @@
-import { Injectable, EventEmitter, Output } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -8,10 +8,9 @@ import { HttpClient } from '@angular/common/http';
 
 
 export class ClienteCitaService {
- private url = "http://192.168.1.71:3000/cliente/nuevacita";
-  
 
  private UrlMisCitas= "http://192.168.1.71:3000/cliente/";
+ private url = "http://localhost:3000/cliente/nuevacita";
 
   constructor(private http: HttpClient){}
 
@@ -24,6 +23,11 @@ export class ClienteCitaService {
 /*Obtener los datos de la ruta de express, con el get*/
 getcitas(){
   return this.http.get<any>(this.UrlMisCitas)
+}
+
+//buscar al cliente conectado
+consultarCliente(cliente){
+  return this.http.get<any>(this.UrlMisCitas+"/"+cliente.id);
 }
 
 }

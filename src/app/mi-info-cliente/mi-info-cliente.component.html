@@ -1,0 +1,29 @@
+<div id="principal">
+    <div id="titulo" class="section-tittle" align="center" style="margin-top: 70px;">
+        <h2>Actualizar mis datos</h2>
+    </div>
+    <div id="media">
+        <div id="formu" align="center" style="margin-bottom: 70px">
+            <br>
+            <br>
+            <form id="actualizarDatos" class="entry-form" method="put">
+                <input type="hidden" name="id" placeholder="ID" class="form-control" [(ngModel)]="cliente.id">
+
+                <input type="text" name="Nombre" placeholder="NUEVO NOMBRE" class="form-control" [(ngModel)]="cliente.Nombre">
+
+                <input type="text" name="Apellido1" placeholder="PATERNO" class="form-control" [(ngModel)]="cliente.Apellido1">
+
+                <input type="text" name="Apellido2" placeholder="MATERNO" class="form-control" [(ngModel)]="cliente.Apellido2">
+
+                <input type="text" name="Direccion" placeholder="DIRECCIÓN" class="form-control" [(ngModel)]="cliente.Direccion">
+
+                <input type="text" name="Telefono" placeholder="TELÉFONO" class="form-control" [(ngModel)]="cliente.Telefono">
+
+                <input type="hidden" name="Estado" placeholder="Estado" class="form-control" [(ngModel)]="cliente.Estado">
+                <div>
+                    <input style="background-color:  #252020; margin: 10px; width: 90%" type="button" name="guardarcambios" id="guardarcambios" checked (click)="modificarInfocli()" value="Guardar cambios" class="section-btn">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -10,12 +10,12 @@
     <div id="media">
         <div id="formu" align="center" style="margin-bottom: 70px">
             
-            <form id="registroCliente" class="entry-frommm">
+            <form id="registroCliente" class="entry-form" style="background: white;">
 
-                <input type="text" [(ngModel)]="usuario.Usuario" placeholder="Usuario" id="Usuario" name="Usuario" class="entry-formm">
+                <input type="text" [(ngModel)]="usuario.Usuario" placeholder="Usuario" id="Usuario" name="Usuario" class="entry-form-inicio">
                 <br>
                 <br>
-                <input type="password" [(ngModel)]="usuario.Contrasena" placeholder="Contraseña" name="Contrasena" id="Contrasena" class="entry-formm">
+                <input type="password" [(ngModel)]="usuario.Contrasena" placeholder="Contraseña" name="Contrasena" id="Contrasena" class="entry-form-inicio">
                 <br> <br>
                 <input type="button" (click)="login()" value="Entrar" class="section-btn">
             </form>

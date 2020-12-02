@@ -8,22 +8,33 @@
             <br>
             <form id="registroCita" class="entry-form">
 
+                <!--ID ÚNICO DE LA CITA-->
 
                 <input [(ngModel)]="cita.id_cita" type="hidden" value="{{cita.id_cita}}" class="form-control" name="id_cita">
 
-                <input [(ngModel)]="cita.Fecha" type="date" placeholder="Fecha" value="{{cita.Fecha}}" class="form-control" name="Fecha">
+                <!--FECHA DE LA CITA-->
 
-                <input [(ngModel)]="cita.Hora" type="time" placeholder=" Hora" value="{{cita.Hora}}" class="form-control" name="Hora">
-
-                <input [(ngModel)]="cita.Motivo" type="text" placeholder="Motivo de la cita" value="{{cita.Motivo}}" class="form-control" name="Motivo">
-
-                <input [(ngModel)]="cita.id_Empleado" type="hidden" value="{{cita.id_Empleado}}" class="form-control" name="id_Empleado">
-
-                <input [(ngModel)]="cita.Matricula_Vehiculo" type="text" placeholder="Matricula del Vehiculo" value="{{cita.Matricula_Vehiculo}}" class="form-control" name="Matricula_Vehiculo">
+                <input [(ngModel)]="cita.Fecha" type="date" placeholder="Fecha" value="{{cita.Fecha}}" class="form-control Fecha" name="Fecha" required>
 
 
-                <!--input [(ngModel)]="cita.Estado" type="hidden" value="{{cita.Estado}}" class="form-control" name="Estado"-->
+                <!--HORA DE LA CITA-->
+                <input [(ngModel)]="cita.Hora" type="time" placeholder=" Hora" value="{{cita.Hora}}" class="form-control" name="Hora" required>
 
+
+                <!--MOTIVO ó DESCRIPCION DE LA CITA-->
+                <input [(ngModel)]="cita.Motivo" type="text" placeholder="Motivo de la cita" value="{{cita.Motivo}}" class="form-control" name="Motivo" required>
+
+
+
+                <!--MATRICULA DEL VEHÍHCULO-->
+                <div class="custom-select">
+                    <select name="matri" id="matri" [(ngModel)] = "cita.Matricula_Vehiculo">
+                        <option value="{{vehi.Matricula}}" *ngFor = "let vehi of cliente.Vehiculo" > {{vehi.Matricula}} </option>
+                    </select>
+                </div>
+
+
+                <!--BOTON DE REGISTRAR-->
                 <input type="button" (click)="registrarcita()" value="Registrar Cita" class="section-btn">
 
             </form>

@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class InicioSesionService {
-  url = "http://192.168.1.71:3000/usuario/inicio";
+  url = "http://localhost:3000/usuario/inicio";
   @Output() change: EventEmitter<boolean> = new EventEmitter();
   @Output() change2: EventEmitter<String> = new EventEmitter();
   @Output() change3: EventEmitter<String> = new EventEmitter();
