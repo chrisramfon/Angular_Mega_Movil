@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 
 
 export class EditarinfoClienteService {
-  private urlMiInfo ="http://localhost:3000/cliente"
+  private urlMiInfo ="http://192.168.1.71:3000/cliente"
   constructor(private http: HttpClient) {}
 
 

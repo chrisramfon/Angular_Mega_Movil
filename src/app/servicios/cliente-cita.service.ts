@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class ClienteCitaService {
 
  private UrlMisCitas= "http://192.168.1.71:3000/cliente/";
- private url = "http://localhost:3000/cliente/nuevacita";
+ private url = "http://192.168.1.71:3000/cliente/nuevacita";
 
   constructor(private http: HttpClient){}
 

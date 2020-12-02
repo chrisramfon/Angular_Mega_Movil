@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class MiscitasService {
-  private url="http://localhost:3000/cliente"
+  private url="http://192.168.1.71:3000/cliente"
 
   constructor(private http: HttpClient) { }
 
